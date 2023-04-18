@@ -8,7 +8,7 @@ import Layout from '@/layout/layout';
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   if (Component.getLayout) {
-    return <Component {...pageProps} />;
+    return (Component.getLayout(<Component {...pageProps} />))
   } else {
     return (
       <Layout>
