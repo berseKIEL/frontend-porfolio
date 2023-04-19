@@ -1,0 +1,23 @@
+.glowImage {
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+}
+
+.goBack {
+  display: block;
+  position: fixed;
+  font-size: 1.5rem ;
+  font-weight: bold;
+  line-height: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  top: 5%;
+  left: 1%;
+  margin-top: -1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: -0.25rem 0 1rem rgba(0, 0, 0, 0.15);
+}
+
+.goBack:hover {
+  background: var(--primary-400);
+}
