@@ -1,9 +1,28 @@
+import AppLanguage from "@/components/AppLanguage";
+import { Page } from "@/types/layout";
+import Head from "next/head";
+import React from "react";
 
-
-export default function Home() {
+const LandingPage: Page = () => {
   return (
     <>
-      <h1> Hello World </h1>
+      <Head>
+        <title> Creador De porfolios de Exequiel Barco</title>
+      </Head>
+      <div>
+        <h1> El creador de porfolios </h1>
+      </div>
     </>
+   );
+}
+
+LandingPage.getLayout = function getLayout(page) {
+  return (
+    <React.Fragment>
+      <AppLanguage/>
+      {page}
+    </React.Fragment>
   )
 }
+ 
+export default LandingPage;
