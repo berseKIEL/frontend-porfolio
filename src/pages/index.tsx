@@ -1,4 +1,5 @@
 import AppLanguage from "@/components/AppLanguage";
+import LayoutLanding from "@/layout/layoutlanding";
 import { Page } from "@/types/layout";
 import Head from "next/head";
 import React from "react";
@@ -7,11 +8,9 @@ const LandingPage: Page = () => {
   return (
     <>
       <Head>
-        <title> Creador De porfolios de Exequiel Barco</title>
+        <title> Landing Tecnologias Kiel </title>
       </Head>
-      <div>
-        <h1> El creador de porfolios </h1>
-      </div>
+      <LayoutLanding />
     </>
    );
 }

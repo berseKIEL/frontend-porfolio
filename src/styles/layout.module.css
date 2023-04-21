@@ -29,5 +29,6 @@
 }
 
 .layoutLanguageButton:hover {
-  background: var(--primary-400);
+  text-decoration: var(--primary-400);
+  transform: scale(1.1) rotate(5deg);
 }
