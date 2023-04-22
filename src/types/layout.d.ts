@@ -15,3 +15,5 @@ export type LayoutState = {
   staticMenuMobileActive: boolean;
   menuHoverActive: boolean;
 };
+
+export type NodeRef = MutableRefObject<ReactNode>;

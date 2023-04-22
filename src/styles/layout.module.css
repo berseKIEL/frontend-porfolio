@@ -7,8 +7,8 @@
   background: var(--primary-color);
   color: var(--primary-color-text);
   text-align: center;
-  top: 5%;
-  right: 1%;
+  bottom: 5%;
+  right: 3%;
   margin-top: -1.5rem;
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
