@@ -16,7 +16,7 @@ const LandingNavBar = () => {
   };
 
   return (
-    <header className="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
+    <header className="py-1 lg:py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
       <StyleClass
         nodeRef={menuRef as NodeRef}
         selector="@next"

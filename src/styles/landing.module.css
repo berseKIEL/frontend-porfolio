@@ -1,6 +1,10 @@
 .textBreathing {
-  -webkit-animation: breathing 5s ease-out infinite normal;
-  animation: breathing 5s ease-out infinite normal;
+  -webkit-animation: breathing 0.5s ease-out infinite normal;
+  animation: breathing 0.5s ease-out infinite normal;
+}
+
+.heroImage {
+  background-image: url('/Logo.jpg');
 }
 
 @-webkit-keyframes breathing {

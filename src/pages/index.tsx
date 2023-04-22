@@ -1,4 +1,6 @@
 import AppLanguage from "@/components/AppLanguage";
+import LandingFooter from "@/components/landing/LandingFooter";
+import LandingMain from "@/components/landing/LandingMain";
 import LayoutLanding from "@/layout/layoutlanding";
 import { Page } from "@/types/layout";
 import Head from "next/head";
@@ -10,7 +12,9 @@ const LandingPage: Page = () => {
       <Head>
         <title> Landing Tecnologias Kiel </title>
       </Head>
-      <LayoutLanding />
+      <LayoutLanding>
+        <LandingMain/>
+      </LayoutLanding>
     </>
    );
 }
