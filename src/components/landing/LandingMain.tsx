@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { Button } from "primereact/button";
-import { classNames } from "primereact/utils";
-import styles from '@/styles/landing.module.css'
 
 const LandingMain = () => {
     return ( 
@@ -12,7 +10,7 @@ const LandingMain = () => {
                         <span className="block text-6xl font-bold mb-1">Barco Exequiel</span>
                         <div className="text-6xl text-primary font-bold mb-3"> Full Stack Developer </div>
                         <p className="mt-0 mb-4 text-700 line-height-3">
-                            Bienvenidos a mi <strong>Proyecto Personal</strong>. Mi nombre es Exequiel, aunque me suelen llamar <strong>Kiel</strong> o <strong>Soni</strong>. Este lugar, contiene información relacionada a mi vida personal como proyectos, blogs, hobbies y más.
+                            Bienvenidos a mi <strong>Proyecto Personal</strong>. Mi nombre es Exequiel, aunque me suelen llamar <strong>Kiel</strong> o <strong>Soni</strong>. Este lugar, contiene información relacionada a mi vida profesional de desarrollador como proyectos, blogs, y más.
                         </p>
                         <Button label="Contacto" type="button" className="mr-3 p-button-raised" />
                         <Button label="Ver Porfolio" type="button" className="p-button-outlined" />
