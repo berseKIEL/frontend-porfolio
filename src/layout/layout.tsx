@@ -29,7 +29,7 @@ const Layout = ({ children }: ChildContainerProps) => {
           property="og:description"
           content="Porfolio Exequiel Barco, Full-Stack Developer"
         />
-        <meta property="og:image" content={`/favicon/favicon.ico`}></meta>
+        <meta property="og:image" content={`/metaimage.png`}></meta>
         <meta property="og:ttl" content="604800"></meta>
       </Head>
       <AppLanguage />
