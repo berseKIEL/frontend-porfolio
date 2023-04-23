@@ -11,6 +11,9 @@ const LandingNavBar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const menuRef = useRef<HTMLElement | null>(null);
 
+  const toggleMenuItemClick = () => {
+    setIsHidden((prevState) => !prevState);
+  };
 
   return (
     <header className="py-1 lg:py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
@@ -21,9 +24,7 @@ const LandingNavBar = () => {
         leaveToClassName="hidden"
         hideOnOutsideClick
       >
-        <div
-          className="lg:absolute flex lg:w-10 align-items-center justify-content-center z-4 pointer-events-none"
-        >
+        <div className="lg:absolute flex lg:w-10 align-items-center justify-content-center z-4 pointer-events-none">
           <Link href="/">
             <h1
               className={`text-900 font-medium text-center text-6xl my-2 line-height-3 text-primary-500 ${styles.textBreathing}`}
@@ -44,10 +45,11 @@ const LandingNavBar = () => {
         )}
         style={{ top: '100%' }}
       >
-        <ul className="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
+        <ul className="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
           <li>
             <Link
-              href={"/"}
+              href={'/'}
+              onClick={toggleMenuItemClick}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Home</span>
@@ -56,7 +58,8 @@ const LandingNavBar = () => {
           </li>
           <li>
             <Link
-              href={"/blog"}
+              href={'/blog'}
+              onClick={toggleMenuItemClick}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Blog</span>
@@ -65,7 +68,8 @@ const LandingNavBar = () => {
           </li>
           <li>
             <Link
-              href={"/porfolio"}
+              href={'/porfolio'}
+              onClick={toggleMenuItemClick}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Porfolio</span>
@@ -74,7 +78,8 @@ const LandingNavBar = () => {
           </li>
           <li>
             <Link
-              href={"/contact"}
+              href={'/contact'}
+              onClick={toggleMenuItemClick}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Contacto</span>
