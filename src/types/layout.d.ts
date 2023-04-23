@@ -16,4 +16,13 @@ export type LayoutState = {
   menuHoverActive: boolean;
 };
 
+export interface LayoutContextProps {
+  layoutConfig: LayoutConfig;
+  setLayoutConfig: Dispatch<SetStateAction<LayoutConfig>>;
+  layoutState: LayoutState;
+  setLayoutState: Dispatch<SetStateAction<LayoutState>>;
+  onMenuToggle: () => void;
+  showProfileSidebar: () => void;
+}
+
 export type NodeRef = MutableRefObject<ReactNode>;

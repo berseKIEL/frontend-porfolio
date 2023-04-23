@@ -3,6 +3,8 @@ import React from 'react';
 import { ChildContainerProps } from '@/types/types';
 import AppLanguage from '../components/AppLanguage';
 import AppNavBar from '@/components/AppNavBar';
+import LandingNavBar from '@/components/landing/LandingNavBar';
+import LandingFooter from '@/components/landing/LandingFooter';
 
 const Layout = ({ children }: ChildContainerProps) => {
   return (
@@ -32,9 +34,15 @@ const Layout = ({ children }: ChildContainerProps) => {
         <meta property="og:ttl" content="604800"></meta>
       </Head>
       <AppLanguage />
-      <AppNavBar />
-      <div>
-        {children}
+      <div className="surface-0 flex justify-content-center min-h-screen">
+        <div
+          id="home"
+          className="w-full overflow-hidden flex flex-column justify-content-between"
+        >
+          <LandingNavBar />
+          {children}
+          <LandingFooter />
+        </div>
       </div>
     </React.Fragment>
   );
