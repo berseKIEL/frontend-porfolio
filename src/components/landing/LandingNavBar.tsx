@@ -26,7 +26,7 @@ const LandingNavBar = () => {
         >
           <Link href="/">
             <h1
-              className={`text-900 font-medium text-center text-6xl line-height-3 text-primary-500 ${styles.textBreathing}`}
+              className={`text-900 font-medium text-center text-6xl my-2 line-height-3 text-primary-500 ${styles.textBreathing}`}
             >
               Kiel
             </h1>

@@ -1,10 +1,9 @@
-import AboutComponent from '@/components/porfolio/About';
 import { Page } from '@/types/layout';
 
 const PorfolioPage: Page = () => {
   return (
     <>
-      <AboutComponent></AboutComponent>
+      <h1> Hola mundo </h1>
     </>
   );
 };

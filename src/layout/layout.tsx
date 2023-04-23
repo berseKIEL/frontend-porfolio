@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React from 'react';
 import { ChildContainerProps } from '@/types/types';
 import AppLanguage from '../components/AppLanguage';
-import AppNavBar from '@/components/AppNavBar';
 import LandingNavBar from '@/components/landing/LandingNavBar';
 import LandingFooter from '@/components/landing/LandingFooter';
 
@@ -40,7 +39,9 @@ const Layout = ({ children }: ChildContainerProps) => {
           className="w-full overflow-hidden flex flex-column justify-content-between"
         >
           <LandingNavBar />
-          {children}
+          <main className="main my-7 px-6 flex flex-column align-items-center justify-content-center">
+            {children}
+          </main>
           <LandingFooter />
         </div>
       </div>
