@@ -2,8 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { ChildContainerProps } from '@/types/types';
 import AppLanguage from '../components/AppLanguage';
-import LandingNavBar from '@/components/landing/LandingNavBar';
-import LandingFooter from '@/components/landing/LandingFooter';
+import { Analytics } from '@vercel/analytics/react';
 
 const Layout = ({ children }: ChildContainerProps) => {
   return (
@@ -33,18 +32,8 @@ const Layout = ({ children }: ChildContainerProps) => {
         <meta property="og:ttl" content="604800"></meta>
       </Head>
       <AppLanguage />
-      <div className="surface-0 flex justify-content-center min-h-screen">
-        <div
-          id="home"
-          className="w-full overflow-hidden flex flex-column justify-content-between"
-        >
-          <LandingNavBar />
-          <main className="main my-7 px-6 flex flex-column align-items-center justify-content-center">
-            {children}
-          </main>
-          <LandingFooter />
-        </div>
-      </div>
+      {children}
+      <Analytics />
     </React.Fragment>
   );
 };
