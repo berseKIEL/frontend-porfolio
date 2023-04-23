@@ -1,3 +1,4 @@
+import { loadPorfolio } from "@/lib/ServerFunctions";
 import Image from "next/image";
 import { Button } from "primereact/button";
 
@@ -22,6 +23,16 @@ const LandingMain = () => {
             </div>
         </main>
      );
+}
+
+export async function getStaticProps() {
+    const porfolio = await loadPorfolio()
+
+    return {
+        props: {
+            porfolio
+        },
+    }
 }
 
 export default LandingMain;

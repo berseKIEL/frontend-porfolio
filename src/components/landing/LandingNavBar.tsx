@@ -11,9 +11,6 @@ const LandingNavBar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const menuRef = useRef<HTMLElement | null>(null);
 
-  const toggleMenuItemClick = () => {
-    setIsHidden((prevState) => !prevState);
-  };
 
   return (
     <header className="py-1 lg:py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
@@ -24,13 +21,17 @@ const LandingNavBar = () => {
         leaveToClassName="hidden"
         hideOnOutsideClick
       >
-        <Link href="/" className="lg:absolute flex lg:w-10 align-items-center justify-content-center z-4">
-          <h1
-            className={`text-900 font-medium text-center text-6xl line-height-3 text-primary-500 ${styles.textBreathing}`}
-          >
-            Kiel
-          </h1>
-        </Link>
+        <div
+          className="lg:absolute flex lg:w-10 align-items-center justify-content-center z-4 pointer-events-none"
+        >
+          <Link href="/">
+            <h1
+              className={`text-900 font-medium text-center text-6xl line-height-3 text-primary-500 ${styles.textBreathing}`}
+            >
+              Kiel
+            </h1>
+          </Link>
+        </div>
         <i
           ref={menuRef}
           className="pi pi-bars text-4xl cursor-pointer block lg:hidden text-700"
@@ -45,53 +46,51 @@ const LandingNavBar = () => {
       >
         <ul className="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
           <li>
-            <a
-              href="#home"
-              onClick={toggleMenuItemClick}
+            <Link
+              href={"/"}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Home</span>
               <Ripple />
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#blog"
-              onClick={toggleMenuItemClick}
+            <Link
+              href={"/blog"}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Blog</span>
               <Ripple />
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#porfolio"
-              onClick={toggleMenuItemClick}
+            <Link
+              href={"/porfolio"}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Porfolio</span>
               <Ripple />
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#Contacto"
-              onClick={toggleMenuItemClick}
+            <Link
+              href={"/contact"}
               className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3"
             >
               <span>Contacto</span>
               <Ripple />
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-          <Button
-            label="Login"
-            text
-            rounded
-            className="border-none font-light line-height-2 text-primary-500 font-bold"
-          ></Button>
+          <Link href="/login" passHref legacyBehavior>
+            <Button
+              label="Login"
+              text
+              rounded
+              className="border-none font-light line-height-2 text-primary-500 font-bold"
+            ></Button>
+          </Link>
           <Button
             label="Registro"
             rounded
